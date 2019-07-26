@@ -1,19 +1,73 @@
 /* This is going to be used for any modified/custom styling */
 
+
+/* CSS Reset-to make  sure our css is read the same across all browsers*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
 .navbar {
-    background-color: rgba(87, 4, 165, 0.5);
+    background-color: rgba(248, 247, 248, 0.7);
     border-bottom:1px, solid #dedede;
     font-family: 'Alegreta Sans', sans-serif;
 }
 
 .navbar .navbar-nav .nav-link {
-color:#d1d1d1;
+color:rgb(139, 56, 194);
+color: rgb(72, 33, 95);
 }
 
 
 
 .navbar .navbar-nav .nav-link:hover {
-    color:black;
+    color:rgb(139, 56, 194);
     }
     
 .nav-item{
@@ -32,6 +86,7 @@ align-items: center;
 }
 
 
+
 #header img{
     padding:0 0 20px 0;
     width:80%;
@@ -44,11 +99,34 @@ align-items: center;
     border-radius:10px;
 }
 
+.text-center{
+    font-size:100px;
+    align: center;
+}
+
 img{
 width: 50%;
 }
 
 .container{
     padding:300px;
-    text-align: left;
+    text-align: center;
+    font-size:100px;
+}
+
+#carouselExampleSlidesOnly{
+    padding:30px;
+    width:80%;
+    margin:auto;
+}
+
+.col-md-4{
+    padding:15px;
+}
+
+
+
+p{
+    text-align: center;
+    font-size:40px;
 }
