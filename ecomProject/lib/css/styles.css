@@ -105,7 +105,8 @@ align-items: center;
 
 .text-center{
     font-size:100px;
-    align: center;
+    padding:200px;
+   
 }
 
 img{
@@ -118,6 +119,11 @@ width: 50%;
     font-size:100px;
 }
 
+.container2{
+    padding-top:500px;
+    font-size: 50px;
+}
+
 #carouselExampleSlidesOnly{
     padding:30px;
     width:80%;
@@ -128,25 +134,27 @@ width: 50%;
 
 
 p{
+    padding:10px;
     text-align: center;
-    font-size:40px;
+    font-size:27px;
 }
+
 
 /* styles for my text input for my html form*/
 input[type=text] {
    
-    width:300px;
-    height:25px;
+    width:500px;
+    height:35px;
     transition: 0.3s;
     outline: none;
     margin:auto;
     display:block;
+
   }
 
   form{
       padding:50px;
       margin:auto;
-      align:center;
   }
   /* when someone clicks on any of the input text areas, it transitions and the  solid tan border pops up*/
   input[type=text]:focus {
@@ -160,10 +168,13 @@ input[type=text] {
   }
 textarea{
     margin:20px;
+    width:600px;
+    height:350px;
 
 }
   footer { 
     background-color:rgb(53, 13, 68);
+    color:white;
     padding: 10px;
     margin-top:20px;
     
@@ -171,18 +182,19 @@ textarea{
 
   .myform{
     border-radius: 5px;
+    border: 2px solid white;
     background-color: #f2f2f2;
     padding: 20px;
     width:80%;
     margin:auto;
-    background-image: url(https://as1.ftcdn.net/jpg/02/47/97/06/500_F_247970639_dRXrGNbm4WmLeo6VCsqOOZTWe42siIXB.jpg);
-    background-repeat: repeat, no-repeat;
+    background: rgb(59,3,163);
+background: linear-gradient(90deg, rgba(59,3,163,1) 0%, rgba(88,37,170,1) 35%, rgba(156,119,231,1) 100%);
   }
 
   
 
 
-  body {
+body {
     text-align: center;
     font-family: 'Alegreta Sans', sans-serif;
 }
@@ -191,15 +203,78 @@ form {
 }
 label{
     font-size: 41px;
-    color: rgb(53, 13, 68);;
+    color: white;
     margin:20px;
-    background-color: #dedede;
+    text-shadow: 5px 5px rgb(48, 5, 116);
     font-family: "Verdana";
     font-weight: 400;
 }
 
 legend{
     font-size:60px;
-    background-color: #dedede;
-    color: rgb(53, 13, 68);;
+    text-shadow: 5px 5px rgb(48, 5, 116);
+    color: white;
 }
+
+.whatstyle img{
+   width:60%;
+    padding:50px;
+    height:450px;
+}
+div{
+    padding:30px;
+}
+
+h3{
+    font-size:35px;
+}
+h2{
+    font-size:60px;
+
+}
+
+
+
+
+
+
+
+/* Style my filter  */
+input[type="radio"] {
+    display:none;
+}
+
+label {
+    width:23%;
+    float:left;
+    text-align:center;
+    background: rgb(48, 5, 116);;
+    color:#fff;
+    padding:0.5%;
+    margin:0.5%;
+    margin-bottom:30px;
+    cursor:pointer;
+    border: 1px solid #000000;
+    border-radius: 10px
+}
+input[type="radio"][id="blue"]:checked + label {
+    background: #ad6beb;
+}
+input[type="radio"][id="blue"]:checked ~ .row .funart, input[type="radio"][id="blue"]:checked ~ .row .green {
+    visibility: hidden;
+}
+input[type="radio"][id="red"]:checked + label {
+    background: #ad6beb;
+}
+input[type="radio"][id="red"]:checked ~ .row .business, input[type="radio"][id="red"]:checked ~ .row .green {
+    visibility: hidden;
+}
+input[type="radio"][id="green"]:checked + label {
+    background: #ad6beb;
+}
+input[type="radio"][id="green"]:checked ~ .row .over10 {
+    visibility: hidden;
+}
+input [type="radio"] [id="reset"]:checked + label{
+ background:#ad6beb;
+    }
