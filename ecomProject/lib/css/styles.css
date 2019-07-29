@@ -102,11 +102,15 @@ align-items: center;
     padding:100px;
 }
 
-.text-center{
-    font-size:100px;
-    padding:200px;
-   
+.page-header {
+    padding-top: 200px;
 }
+
+.index-header {
+    text-align: center;
+}
+
+
 
 img{
 width: 50%;

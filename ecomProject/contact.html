@@ -69,7 +69,7 @@
         <input type="text" name="Phone Number" id="Phone Number" placeholder="555-333-3355" required>
 
         <label for="Email Address">Email Address:</label>
-        <input type="text" name="Email" id="Email" placeholder="John345@gmail.com">
+        <input type="text" name="Email" id="Email" placeholder="John345@gmail.com" required>
 
       </fieldset>
 
@@ -92,7 +92,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
   
   <script>
-  $('.myform').validate();
+  $("form[name='my_form']").validate();
   </script>
          
 </body>
