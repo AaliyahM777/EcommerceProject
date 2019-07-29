@@ -50,7 +50,11 @@ table {
 
 
 
-
+/* Media Queries*/
+@media (min-width:768px){
+textarea{
+width: 80%;}
+}
 /*Boot strap Navbar*/
 .navbar {
     background-color: rgba(248, 247, 248, 0.7);
@@ -172,7 +176,6 @@ input[type=text] {
   }
 textarea{
     margin:20px;
-    width:600px;
     height:350px;
 
 }
