@@ -50,11 +50,8 @@ table {
 
 
 
-/* Media Queries*/
-@media (min-width:768px){
-textarea{
-width: 80%;}
-}
+
+
 /*Boot strap Navbar*/
 .navbar {
     background-color: rgba(248, 247, 248, 0.7);
@@ -68,11 +65,11 @@ color: rgb(72, 33, 95);
 }
 
 
-
+/*the color when you hover over  these classes*/
 .navbar .navbar-nav .nav-link:hover {
     color:rgb(139, 56, 194);
     }
-    
+ /* size and padding space within each nav item*/   
 .nav-item{
     font-size:30px;
     padding:20px;
@@ -264,6 +261,7 @@ input[type="radio"] {
     display:none;
 }
 
+
 .filter-label {
     width:23%;
     float:left;
@@ -276,6 +274,15 @@ input[type="radio"] {
     cursor:pointer;
     border: 1px solid #000000;
     border-radius: 10px
+
+    /* styling for my labels:
+    blue=Buisness Pens filter 
+    red= Fun/Art Pens
+    green=Under $10
+    
+    */
+    /* when radio button blue is checked changes background once clicked 
+      */
 }
 input[type="radio"][id="blue"]:checked + .filter-label {
     background: #ad6beb;

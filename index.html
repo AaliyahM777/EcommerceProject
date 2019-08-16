@@ -1,13 +1,13 @@
 <!Doctype html>
 <html lang="en">
-
+<!--This Page will be and remian STATIC-->
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS,Jquery,font-awsome,Links-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
@@ -33,10 +33,12 @@
   <!--NavBar-->
   <nav class="navbar navbar-expand-lg fixed-top ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
+      <!--icon code of my burger menu-->
       <span class="navbar-toggler-icon">&#9776;</span>
     </button>
 
     <!--My logo and NavBar-->
+    <!--source file of my logo i made here and img fluid helps with responsivness-->
     <a class="navbar-brand" href="#"><img src="LogoMakr_1Igl02.png" class="img-fluid"> </a>
     <div class="collaspe navbar-collapse" id="navigation-bar">
       <ul class="navbar-nav ml-auto">
@@ -58,9 +60,14 @@
 
   </div>
   <!--Boot Strap SlideShow-->
+  <!--  set id  and class of carousel, (data-ride carousel) waits for the page to load before animating , (data-interveral set to 5 thousands miliseconds=5 seconds )is the time it stays on one slide till rotates-->
+  <!--(data-pause )set to false sets it so when even mouse cursor is on slider it doesnt pause the slider rotating it keeps running-->
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="5000"
     data-pause="false">
     <div class="carousel-inner">
+
+      <!--(carousel-item active)one carousel-item slide has to be set to active in order to be visiable/ when page load slider needs to be visiable and active-->
+      <!---->
       <div class="carousel-item active">
         <img class="d-block w-100" src="https://images-na.ssl-images-amazon.com/images/I/71qfx5e5iNL._SL1500_.jpg"
           alt="First slide">
@@ -77,7 +84,7 @@
     </div>
   </div>
   <div class="carousel-slider">
-
+ <!--Jquery will run here-->
   </div>
 
 
@@ -92,7 +99,7 @@
   <!--End Header-->
   <hr>
   <div class="whatstyle">
-
+ <!--Preferences of pen styles my images with text-->
     <h2>Whats Your Style?</h2>
     <div>
       <h3>Business</h3>
@@ -121,7 +128,7 @@
 
 
   <!-- Optional JavaScript -->
-  <!-- jQuery -->
+  <!-- jQuery Slider-->
 
 
   <script>
@@ -133,16 +140,19 @@
 
     */
     // my jquery slider which helps go along with my bootstrap carosuel
+    // document ready says when your page is loaded run the function
     $(document).ready(function () {
       // selecting variables 
+      /* creating variables $carousel and $slider to equal the div id of my carousel and class of carousel slider
+      so that i can just refer to the variables name when using it in other statements or functions*/
       var $carousel = $('#carouselExampleSlidesOnly');
       var $slider = $(".carousel-slider");
 
       // creating slider 
       $(".carousel-slider").slider({
-        max: $carousel.find('.carousel-item').length - 1,// setting max value of items in the carousel
+        max: $carousel.find('.carousel-item').length - 1,// setting max value of items in the carousel we  want to get the length of the array 0-2 to 0-3 to see slider
         slide: function (e, ui) {
-          $carousel.carousel(ui.value);// when the slider slides set the psotion of the carosuel
+          $carousel.carousel(ui.value);// when the slider slides set the position of the carosuel
         }
       });
 

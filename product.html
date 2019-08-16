@@ -1,3 +1,5 @@
+<!-- Added react, react-dom, and babel files to just products page so we can strart coding as a react app-->
+
 <head>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
@@ -14,7 +16,7 @@
     <div id="products-page"></div>
     <script type="text/babel">
 
-
+{/* created a functional component called products with an array of multiple key values*/}
     const products=[
         {
             image:"https://nibsmith.com/wp-content/uploads/2018/09/platinum-3776-Chenonceau-White-fountain-pen-nibsmith.jpg",
@@ -90,40 +92,45 @@
             type:"business over10"
         }
     ]
+    {/* created a class componenet called Productspage */}
+    {/* this class component renders out and returns:
+    1.) my navbar functional componenet that we call within the render
+    2.) my section id and div classes that contain my heading paragraphs and my row of  my filter labels
+     */}
         class ProductsPage extends React.Component {
-            render() {
-                return (
-                    <div>
-                        <NavBar />
-                        <section id="work">
-                            <div class="penproducts">
-                                <div class="row">
-                                    <div class="col-md-12 page-header">
-                                    <h2>Our Products</h2>
-                                    <p>Choose from our Pen collection</p>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <input type="radio" id="blue" name="color" />
-                                    <label class="filter-label" for="blue">Business Pens</label>
-                                    <input type="radio" id="red" name="color" />
-                                    <label class="filter-label" for="red">Fun/Art Pens</label>
-                                    <input type="radio" id="green" name="color" />
-                                    <label class="filter-label" for="green">Under $10</label>
-                                    <input type="radio" id="reset" name="color" />
-                                    <label class="filter-label" for="reset">All</label>
-
-                                    <div className="row">
-                                        {this.props.products.map(product => <Product  {...product}/>)} {/* the spread operator is calls all the items within my products functional component*/}
-                                    </div>
-                                </div>
-                               
-                                
-                            </div>
-                        </section>
-                        <Footer />
-                  
+    render() {
+        return (
+            <div>
+                <NavBar />
+        <section id="work">
+            <div class="penproducts">
+                <div class="row">
+                    <div class="col-md-12 page-header">
+                    <h2>Our Products</h2>
+                    <p>Choose from our Pen collection</p>
                     </div>
+                </div>
+                <div className="row">
+                    <input type="radio" id="blue" name="color" />
+                    <label class="filter-label" for="blue">Business Pens</label>
+                    <input type="radio" id="red" name="color" />
+                    <label class="filter-label" for="red">Fun/Art Pens</label>
+                    <input type="radio" id="green" name="color" />
+                    <label class="filter-label" for="green">Under $10</label>
+                    <input type="radio" id="reset" name="color" />
+                    <label class="filter-label" for="reset">All</label>
+
+                    <div className="row">
+                        {this.props.products.map(product => <Product  {...product}/>)} {/* the spread operator is calls all the items within my products functional component*/}
+                    </div>
+                </div>
+                
+                                
+                </div>
+            </section>
+            <Footer />
+
+        </div>
 
                 
                 )
@@ -131,7 +138,10 @@
 
         }
 
-
+{/* created a  navbar functional component and it returns 
+  how the navbar  links will dsiplay and look through bootstrap
+  my icon on navbar
+ */}
     const NavBar=() => {
         return(
                         
@@ -154,6 +164,10 @@
     )
 }
 
+
+{/* created a  footer functional component for footer bottom at webpage and it returns 
+my social media links
+ */}
     const Footer=() =>{
             return(
                 <footer>
@@ -171,6 +185,10 @@
 }
 
 
+{/* created a  Product functional component and it passes in properties to
+each part of my product cards(the product image,the name of product, and the price of product)
+
+ */}
     const Product = (props) =>(
 
         <div className={props.type + " col-md-3 col-sm-6  under10"}>
@@ -190,7 +208,7 @@
     )
 
         
-
+{/* Renders out my entire products page through classical component products page to the DOM */}
      ReactDOM.render(<ProductsPage products={products} />, document.querySelector("#products-page"))   
     </script>
 </body>
