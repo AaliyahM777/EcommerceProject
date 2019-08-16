@@ -1,298 +1,162 @@
-<!Doctype html>
-<html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="lib/css/styles.css" />
-  <link rel="stylesheet" href="font-awesome.min.css" />
-
-
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <title>PenPowers(Products)</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="lib/css/styles.css" />
+    <link rel="stylesheet" href="font-awesome.min.css" />
 </head>
 
 <body>
+    <div id="products-page"></div>
+    <script type="text/babel">
 
 
+    const products=[
+        {
+            image:"https://nibsmith.com/wp-content/uploads/2018/09/platinum-3776-Chenonceau-White-fountain-pen-nibsmith.jpg",
+            titlename: "Chenonceau White Fountain Pen",
+            price:"$143.00",
+            type:"business over10"
+        },
+
+        {
+            image:"https://images-na.ssl-images-amazon.com/images/I/61gk40Se5vL._SL1500_.jpg",
+            titlename: "Kyinflose Business Pen",
+            price:"$8.99",
+            type:"business under10"
+        },
+        {
+            image:"https://ae01.alicdn.com/kf/HTB1LhCng9BYBeNjy0Feq6znmFXaX/TERCEL-metal-gold-plated-roller-pen-business-pen-ballpoint-pen-signature-pencil-box-color-sequins-pen.jpg_640x640.jpg",
+            titlename: "TERCEL Metal Gold Plated Pen",
+            price:"$17.99",
+            type:"business over10"
+        },
+        {
+            image:"https://img10.joybuy.com/N0/s560x560_jfs/t21319/95/1757175163/34978/7c7111de/5b359f0cN267fa4b8.jpg.dpg",
+            titlename: "BaseBall Wood Pens(2 Pieces)",
+            price:"$7.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://m.media-amazon.com/images/I/41nvXKUvrOL._SR500,500_.jpg",
+            titlename: "7pcs Vitamin Ballpoint Pens",
+            price:"$6.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://images-na.ssl-images-amazon.com/images/I/71mMCW7wMiL._SL1500_.jpg",
+            titlename: "Cactus Design Ballpoint Pen",
+            price:"$9.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://images-na.ssl-images-amazon.com/images/I/61xfoF5Qi7L._SL1001_.jpg",
+            titlename: "10pcs Novelty Bone Shape Ballpoint Pens",
+            price:"$9.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://www.digitalartsonline.co.uk/cmsdata/slideshow/3695874/sailor-fude-de-mannen_thumb800.jpg",
+            titlename: "Sailor Fude De Mannen-Stroke style calligraphy fountain pen",
+            price:"$6.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://images-na.ssl-images-amazon.com/images/I/61bYUCzuM1L._SX425_.jpg",
+            titlename: "Staedtler Pigment Liner Pen",
+            price:"$8.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://images-na.ssl-images-amazon.com/images/I/31tCcVnbLSL._SX425_.jpg",
+            titlename: "Sakura Pigma Micron Pen",
+            price:"$12.99",
+            type:"funart over10"
+        },
+        {
+            image:"https://images-na.ssl-images-amazon.com/images/I/51iMBL%2BekEL._SX425_.jpg",
+            titlename: "MengRan Rose Gold Diamond Pen",
+            price:"$5.99",
+            type:"funart under10"
+        },
+        {
+            image:"https://static.bhphoto.com/images/images500x500/1447179616_1185701.jpg",
+            titlename: "Quartet 4-in-1 Pen",
+            price:"$56.99",
+            type:"business over10"
+        }
+    ]
+        class ProductsPage extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <NavBar />
+                        <section id="work">
+                            <div class="penproducts">
+                                <div class="row">
+                                    <div class="col-md-12 page-header">
+                                    <h2>Our Products</h2>
+                                    <p>Choose from our Pen collection</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <input type="radio" id="blue" name="color" />
+                                    <label class="filter-label" for="blue">Business Pens</label>
+                                    <input type="radio" id="red" name="color" />
+                                    <label class="filter-label" for="red">Fun/Art Pens</label>
+                                    <input type="radio" id="green" name="color" />
+                                    <label class="filter-label" for="green">Under $10</label>
+                                    <input type="radio" id="reset" name="color" />
+                                    <label class="filter-label" for="reset">All</label>
+
+                                    <div className="row">
+                                        {this.props.products.map(product => <Product  {...product}/>)} {/* the spread operator is calls all the items within my products functional component*/}
+                                    </div>
+                                </div>
+                               
+                                
+                            </div>
+                        </section>
+                        <Footer />
+                  
+                    </div>
+
+                
+                )
+            }
+
+        }
 
 
-  <!--NavBar-->
-  <nav class="navbar navbar-expand-lg fixed-top ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
-      <span class="navbar-toggler-icon">&#9776;</span>
-    </button>
+    const NavBar=() => {
+        return(
+                        
+            <nav class="navbar navbar-expand-lg fixed-top ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
+            <span class="navbar-toggler-icon">&#9776;</span>
+            </button>
 
-    <a class="navbar-brand" href="#"><img src="LogoMakr_1Igl02.png" class="img-fluid"> </a>
-    <div class="collaspe navbar-collapse" id="navigation-bar">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"> <a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"> <a class="nav-link" href="product.html">Our Products</a></li>
-        <li class="nav-item"> <a class="nav-link" href="contact.html">Contact Us </a> </li>
-      </ul>
+            <a class="navbar-brand" href="#"><img src="LogoMakr_1Igl02.png" class="img-fluid"/> </a>
+            <div class="collaspe navbar-collapse" id="navigation-bar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> <a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"> <a class="nav-link" href="product.html">Our Products</a></li>
+                <li class="nav-item"> <a class="nav-link" href="contact.html">Contact Us </a> </li>
+            </ul>
 
-    </div>
-  </nav>
-
-
-
-  <section id="work">
-    <div class="penproducts">
-      <div class="row">
-        <div class="col-md-12 page-header">
-          <h2>Our Products</h2>
-          <hr>
-          <p>Choose from our Pen collection</p>
-        </div>
-      </div>
-
-
-      <!-- PRODUCT FILTER -->
-
-      <input type="radio" id="blue" name="color" />
-      <label class="filter-label" for="blue">Business Pens</label>
-      <input type="radio" id="red" name="color" />
-      <label class="filter-label" for="red">Fun/Art Pens</label>
-      <input type="radio" id="green" name="color" />
-      <label class="filter-label" for="green">Under $10</label>
-      <input type="radio" id="reset" name="color" />
-      <label class="filter-label" for="reset">All</label>
-      <!-- END PRODUCT FILTER -->
-      <!-- Row1-->
-      <div class="row">
-
-        <div class="col-md-3 col-sm-6 business over10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://nibsmith.com/wp-content/uploads/2018/09/platinum-3776-Chenonceau-White-fountain-pen-nibsmith.jpg"
-                  alt="Pen1"></a>
-              <div class="img-overlay"></div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"> Chenonceau White Fountain Pen</h5>
-              <p class="card-text">$143.00</p>
-            </div>
-          </div>
-        </div>
+        </nav>
 
+    )
+}
 
-        <div class="col-md-3 col-sm-6  business under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://images-na.ssl-images-amazon.com/images/I/61gk40Se5vL._SL1500_.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Kyinflose Business Pen</h5>
-              <p class="card-text">$8.99</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6  business over10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://ae01.alicdn.com/kf/HTB1LhCng9BYBeNjy0Feq6znmFXaX/TERCEL-metal-gold-plated-roller-pen-business-pen-ballpoint-pen-signature-pencil-box-color-sequins-pen.jpg_640x640.jpg"
-                  alt=""></a>
-
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">TERCEL Metal Gold Plated Pen</h5>
-              <p class="card-text">$17.99</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-6  funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://img10.joybuy.com/N0/s560x560_jfs/t21319/95/1757175163/34978/7c7111de/5b359f0cN267fa4b8.jpg.dpg"
-                  alt=""></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">BaseBall Wood Pens(2 Pieces)</h5>
-              <p class="card-text">$7.99</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Row2-->
-      <div class="row">
-        <div class="col-md-3 col-sm-6  funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://m.media-amazon.com/images/I/41nvXKUvrOL._SR500,500_.jpg" alt=""></a>
-
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">7pcs Vitamin Ballpoint Pens</h5>
-              <p class="card-text">$6.99</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://images-na.ssl-images-amazon.com/images/I/71mMCW7wMiL._SL1500_.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Cactus Design Ballpoint Pen</h5>
-              <p class="card-text">$9.99</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-6 funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://images-na.ssl-images-amazon.com/images/I/61xfoF5Qi7L._SL1001_.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">10pcs Novelty Bone Shape Ballpoint Pens</h5>
-              <p class="card-text">$9.99</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-6 funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://www.digitalartsonline.co.uk/cmsdata/slideshow/3695874/sailor-fude-de-mannen_thumb800.jpg"
-                  alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Sailor Fude De Mannen-Stroke style calligraphy fountain pen</h5>
-              <p class="card-text">$6.99</p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-
-      <!-- Row3-->
-      <div class="row">
-        <div class="col-md-3 col-sm-6 funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://images-na.ssl-images-amazon.com/images/I/61bYUCzuM1L._SX425_.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Staedtler Pigment Liner Pen</h5>
-              <p class="card-text">$8.99</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 funart over10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://images-na.ssl-images-amazon.com/images/I/31tCcVnbLSL._SX425_.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Sakura Pigma Micron Pen</h5>
-              <p class="card-text">$12.99</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-6 funart under10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://images-na.ssl-images-amazon.com/images/I/51iMBL%2BekEL._SX425_.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">MengRan Rose Gold Diamond Pen</h5>
-              <p class="card-text">$5.99</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-6 business over10">
-          <div class="card">
-            <div class="work-img">
-              <a href="#"><img class="card-img-top img-fluid"
-                  src="https://static.bhphoto.com/images/images500x500/1447179616_1185701.jpg" alt="Pen1"></a>
-              <div class="img-overlay"></div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Quartet 4-in-1 Pen</h5>
-              <p class="card-text">$56.99</p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-    </div>
-  </section>
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-</body>
-<footer>
+    const Footer=() =>{
+            return(
+                <footer>
   <p>Follow us:</p>
   <p>Instagram</p>
   <a href="https://www.instagram.com/?hl=en">@PenPowers</a>
@@ -302,6 +166,31 @@
     Created my free logo at logomakr.com
   </p>
 
-</footer>
+</footer>  
+    )
+}
 
-</html>
+
+    const Product = (props) =>(
+
+        <div className={props.type + " col-md-3 col-sm-6  under10"}>
+            <div class="card">
+            <div class="work-img">
+                <a href="#"><img class="card-img-top img-fluid"
+                    src={props.image}
+                    alt="Pen1"/></a>
+            <div class="img-overlay"></div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{props.titlename}</h5>
+                <p class="card-text">{props.price}</p>
+            </div>
+            </div>
+        </div>
+    )
+
+        
+
+     ReactDOM.render(<ProductsPage products={products} />, document.querySelector("#products-page"))   
+    </script>
+</body>

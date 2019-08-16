@@ -112,6 +112,8 @@ align-items: center;
 
 .index-header {
     text-align: center;
+    font-size: 100px;
+    padding-top: 200px;
 }
 
 
@@ -238,8 +240,21 @@ h2{
 
 }
 
-
-
+@media (max-width: 800px) {
+    input[type="text"] {
+        width: 50%;
+    }
+    textarea{
+        width:50%;
+    }
+    .index-header {
+        margin: 0;
+    }
+  
+    .index-img{
+        width:1000px;
+    }
+}
 
 
 
